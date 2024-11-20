@@ -225,5 +225,12 @@ for img_filename in img_list:
 
     generated_text_prefix = generate2(model, tokenizer, embed=prefix_embed)
     print(generated_text_prefix)
-    out = add_title_to_image(img_file, generated_text_prefix,font_size=25,y_position=30)
+    out = add_title_to_image(img_file, generated_text_prefix,font_size=35,y_position=30)
+
+    # Save the image in the 'output' directory
+    output_directory = os.path.join(root_directory, 'output')
+    out_file = os.path.join(output_directory, img_filename)
+    out.save(out_file)
+
+    # Display the image
     out.show()
