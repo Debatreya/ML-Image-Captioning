@@ -1,3 +1,5 @@
+# CLIP: Based Image Captioning Model
+
 ## Steps to setup:
 - pip install all dependencies
 - first run will take a lot of time for downloading all requirements (~1GB)
