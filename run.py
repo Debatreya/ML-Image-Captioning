@@ -233,4 +233,4 @@ for img_filename in img_list:
     out.save(out_file)
 
     # Display the image
-    out.show()
+    # out.show() # Uncomment this line to display the image
