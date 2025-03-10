@@ -13,7 +13,7 @@ device = 'cpu'
 T = torch.Tensor
 D = torch.device
 
-model_path = './model_wieghts.pt'
+model_path = '../model_wieghts.pt' # TODO: CHANGE THIS TO 'model_weights.pt'
 
 class MLP(nn.Module):
 
@@ -209,7 +209,7 @@ model = model.to(device)
 
 # Define the path to the 'images' directory
 root_directory = os.getcwd()  # Gets the current working directory
-images_directory = os.path.join(root_directory, 'images')
+images_directory = os.path.join(root_directory, '../images') # TODO: CHANGE THIS TO 'images'
 
 # Call the function to list files in the 'images' directory
 img_list = list_files(images_directory)
@@ -228,9 +228,9 @@ for img_filename in img_list:
     out = add_title_to_image(img_file, generated_text_prefix,font_size=35,y_position=30)
 
     # Save the image in the 'output' directory
-    output_directory = os.path.join(root_directory, 'output')
+    output_directory = os.path.join(root_directory, '../output') # TODO: CHANGE THIS TO 'output'
     out_file = os.path.join(output_directory, img_filename)
     out.save(out_file)
 
     # Display the image
-    out.show()
+    # out.show() # Uncomment this line to display the image
